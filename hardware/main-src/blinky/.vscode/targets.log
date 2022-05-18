@@ -1,0 +1,486 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed May 18 14:10:16 2022
+
+# Variables
+
+# 'override' directive
+GNUMAKEFLAGS := 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+PAPERSIZE = a4
+# environment
+DESKTOP_SESSION = ubuntu
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# environment
+SNAP_COMMON = /var/snap/code/common
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+IM_CONFIG_PHASE = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# environment
+GDMSESSION = ubuntu
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /home/indir/Fakultet/DiplomskiRad/hardware/main-src/blinky
+# makefile
+SHELL = /bin/sh
+# environment
+SNAP_DATA = /var/snap/code/96
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+JOURNAL_STREAM = 8:53271
+# makefile (from 'Makefile', line 29)
+CFLAGS = -g -O2 -Wall -T$(SDK)/stm32_flash.ld  -mlittle-endian -mthumb -mcpu=cortex-m4 -mthumb-interwork -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fsingle-precision-constant -I. -I $(SDK)
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# environment
+QSYS_ROOTDIR = /home/indir/intelFPGA_lite/20.1/quartus/sopc_builder/bin
+# environment
+SNAP_INSTANCE_NAME = code
+# environment
+SNAP_ARCH = amd64
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /var/lib/snapd/desktop/applications/code_code.desktop
+# environment
+USERNAME = indir
+# environment
+MAKELEVEL := 0
+# environment
+MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+_ = /snap/code/96/usr/share/code/code
+# makefile (from 'Makefile', line 34)
+OBJS = $(SRCS:.c=.o)
+# environment
+MANAGERPID = 1491
+# makefile (from 'Makefile', line 17)
+GNUGCC = ../../gcc-arm-none-eabi/bin
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+LC_NAME = bs_BA.UTF-8
+# environment
+VSCODE_CWD = /home/indir
+# environment
+GSETTINGS_SCHEMA_DIR = /snap/code/96/usr/share/glib-2.0/schemas
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/indir/.local/bin:/home/indir/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/indir/Fakultet/DSA/esp8266-dsa/xtensa-lx106-elf/bin:/home/indir/intelFPGA_lite/20.1/quartus/bin:/home/indir/intelFPGA_lite/20.1/nios2eds/bin
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+QUARTUS_ROOTDIR_OVERRIDE = /home/indir/intelFPGA_lite/20.1/quartus
+# environment
+SESSION_MANAGER = local/indir-ThinkPad:@/tmp/.ICE-unix/1706,unix/indir-ThinkPad:/tmp/.ICE-unix/1706
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GDK_PIXBUF_MODULE_FILE = /home/indir/snap/code/common/.cache/gdk-pixbuf-loaders.cache
+# environment
+SNAP = /snap/code/96
+# makefile (from 'Makefile', line 5)
+STM32CUBEPROG := ../../stmcubeprog/bin/STM32_Programmer.sh -vb 1 -q -c port=SWD 
+# environment
+SNAP_VERSION = da15b6fd
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+VSCODE_LOG_STACK = false
+# environment
+DISABLE_WAYLAND = 1
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+INVOCATION_ID = 340e636a10e14293aad9ed3e8505830d
+# environment
+GDK_PIXBUF_MODULEDIR = /snap/code/96/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+ALTERAOCLSDKROOT = /home/indir/intelFPGA_lite/20.1/hld
+# environment
+LS_COLORS = 
+# makefile (from 'Makefile', line 6)
+SDK = ../../sdk
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 165123
+# makefile (from 'Makefile', line 20)
+SIZE = $(GNUGCC)/arm-none-eabi-size
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+SNAP_INSTANCE_KEY = 
+# environment
+PWD = /home/indir/Fakultet/DiplomskiRad/hardware/main-src/blinky
+# default
+.LOADED := 
+# environment
+SSH_AGENT_PID = 1669
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/indir
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /home/indir/.config/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+# environment
+LOGNAME = indir
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
+# environment
+SNAP_CONTEXT = p-fI_h2BGJKuJZlBgVq7tToymFMakcnWYoiFHQx-BMBl8ctGCXej
+# automatic
++F = $(notdir $+)
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+SNAP_USER_COMMON = /home/indir/snap/code/common
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+ALTERAPATH = /home/indir/intelFPGA_lite/20.1
+# environment
+LC_TIME = bs_BA.UTF-8
+# environment
+SNAP_REAL_HOME = /home/indir
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = ibus
+# makefile (from 'Makefile', line 33)
+SRCS = main.c  usart.c misc.c delay.c $(SDK)/startup_stm32f4xx.s  $(SDK)/system_stm32f4xx.c 
+# environment
+SNAP_USER_DATA = /home/indir/snap/code/96
+# environment
+SHLVL = 0
+# makefile (from 'Makefile', line 18)
+CC = $(GNUGCC)/arm-none-eabi-gcc
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-411ddc0e-cda3-4c6b-a53a-cdf3c4fc8355.sock
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = indir
+# environment
+SNAP_REVISION = 96
+# environment
+LC_MONETARY = bs_BA.UTF-8
+# makefile
+.DEFAULT_GOAL := all
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LC_TELEPHONE = bs_BA.UTF-8
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+LANGUAGE = en_US:en
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-04238bc5-1.67.1-main.sock
+# environment
+BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+IDF_PATH = /home/indir/Fakultet/DSA/ESP8266_RTOS_SDK
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# environment
+LC_PAPER = bs_BA.UTF-8
+# environment
+LC_IDENTIFICATION = bs_BA.UTF-8
+# environment
+QT_ACCESSIBILITY = 1
+# environment
+DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
+# default
+MAKEFILES := 
+# environment
+QUARTUS_ROOTDIR = /home/indir/intelFPGA_lite/20.1/quartus
+# environment
+SNAP_COOKIE = p-fI_h2BGJKuJZlBgVq7tToymFMakcnWYoiFHQx-BMBl8ctGCXej
+# environment
+LC_NUMERIC = bs_BA.UTF-8
+# automatic
+<F = $(notdir $<)
+# environment
+LC_MEASUREMENT = bs_BA.UTF-8
+# environment
+SNAP_NAME = code
+# environment
+LC_ALL = C
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# automatic
+^F = $(notdir $^)
+# makefile (from 'Makefile', line 19)
+OBJCOPY = $(GNUGCC)/arm-none-eabi-objcopy
+ 
+# default
+SUFFIXES := 
+# environment
+SNAP_REEXEC = 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+WINDOWPATH = 2
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# makefile (from 'Makefile', line 2)
+PROJ_NAME = main
+# default
+.RECIPEPREFIX := 
+# environment
+LC_ADDRESS = bs_BA.UTF-8
+# environment
+LANG = C
+# environment
+VSCODE_PID = 165169
+# variable set hash-table stats:
+# Load=149/1024=15%, Rehash=0, Collisions=27/222=12%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2050, inode 2363550): 11 files, no impossibilities.
+
+# 11 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+main.elf: main.c usart.c misc.c delay.c ../../sdk/startup_stm32f4xx.s ../../sdk/system_stm32f4xx.c
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := main.elf
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := main.c usart.c misc.c delay.c ../../sdk/startup_stm32f4xx.s ../../sdk/system_stm32f4xx.c
+# automatic
+# | := 
+# automatic
+# < := main.c
+# automatic
+# ^ := main.c usart.c misc.c delay.c ../../sdk/startup_stm32f4xx.s ../../sdk/system_stm32f4xx.c
+# automatic
+# ? := main.c usart.c misc.c delay.c ../../sdk/startup_stm32f4xx.s ../../sdk/system_stm32f4xx.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/37=5%
+#  recipe to execute (from 'Makefile', line 42):
+	$(CC) $(CFLAGS) $^ -lm -lc -lnosys -o $@ 
+	$(CC) $(CFLAGS) -S $< $^
+	$(OBJCOPY) -O ihex $(PROJ_NAME).elf $(PROJ_NAME).hex
+	$(OBJCOPY) -O binary $(PROJ_NAME).elf $(PROJ_NAME).bin
+	$(SIZE) -B  $(PROJ_NAME).elf
+	ls -l $(PROJ_NAME).bin
+
+example:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 58):
+	@$(STM32CUBEPROG) -w students.bin  0x08000000 
+	@sleep 1
+	@$(STM32CUBEPROG) -hardRst 
+
+all: main.elf
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/25=0%
+
+.PHONY: proj
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+../../sdk/system_stm32f4xx.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-10-27 21:20:07.593456
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+main.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-18 14:09:39.796973428
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../../sdk/startup_stm32f4xx.s:
+#  Implicit rule search has been done.
+#  Last modified 2021-10-27 21:20:07.589455
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-18 14:08:36.94238031
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+delay.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-20 12:38:51.229108
+#  File has been updated.
+#  Successfully updated.
+
+proj:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+misc.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-10-27 21:20:06.225175
+#  File has been updated.
+#  Successfully updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 52):
+	rm -rf *.o $(PROJ_NAME).elf $(PROJ_NAME).hex $(PROJ_NAME).bin *.s
+	ls
+
+# Not a target:
+usart.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-19 21:34:40.668567
+#  File has been updated.
+#  Successfully updated.
+
+upload: proj
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 63):
+	@$(STM32CUBEPROG) -w $(PROJ_NAME).bin  0x08000000 
+	@sleep 1
+	@$(STM32CUBEPROG) -hardRst 
+
+# files hash-table stats:
+# Load=16/1024=2%, Rehash=0, Collisions=0/38=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 24 / storage = 231 B / avg = 9 B
+# current buf: size = 8162 B / used = 231 B / count = 24 / avg = 9 B
+
+# strcache performance: lookups = 42 / hit rate = 42%
+# hash-table stats:
+# Load=24/8192=0%, Rehash=0, Collisions=1/42=2%
+# Finished Make data base on Wed May 18 14:10:16 2022
+
+ 

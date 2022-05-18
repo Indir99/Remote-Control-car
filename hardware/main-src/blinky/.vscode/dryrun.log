@@ -1,0 +1,10 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/indir/Fakultet/DiplomskiRad/hardware/main-src/blinky'
+../../gcc-arm-none-eabi/bin/arm-none-eabi-gcc -g -O2 -Wall -T../../sdk/stm32_flash.ld  -mlittle-endian -mthumb -mcpu=cortex-m4 -mthumb-interwork -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fsingle-precision-constant -I. -I ../../sdk main.c usart.c misc.c delay.c ../../sdk/startup_stm32f4xx.s ../../sdk/system_stm32f4xx.c -lm -lc -lnosys -o main.elf 
+../../gcc-arm-none-eabi/bin/arm-none-eabi-gcc -g -O2 -Wall -T../../sdk/stm32_flash.ld  -mlittle-endian -mthumb -mcpu=cortex-m4 -mthumb-interwork -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fsingle-precision-constant -I. -I ../../sdk -S main.c main.c usart.c misc.c delay.c ../../sdk/startup_stm32f4xx.s ../../sdk/system_stm32f4xx.c
+../../gcc-arm-none-eabi/bin/arm-none-eabi-objcopy -O ihex main.elf main.hex
+../../gcc-arm-none-eabi/bin/arm-none-eabi-objcopy -O binary main.elf main.bin
+../../gcc-arm-none-eabi/bin/arm-none-eabi-size -B  main.elf
+ls -l main.bin
+make: Leaving directory '/home/indir/Fakultet/DiplomskiRad/hardware/main-src/blinky'
+ 
