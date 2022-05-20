@@ -1,6 +1,7 @@
 #include "stm32f4xx.h"
 #include "usart.h"
 #include "delay.h"
+#include <string.h>
 
 int main(void)
 {
@@ -15,16 +16,13 @@ int main(void)
 	GPIOD->OSPEEDR |= 0xFF000000;		 //
 	GPIOD->ODR &= ~(0xf000);
 
-	GPIOD->ODR |= 0xF000;
-
-	// clchar data = 'a';
 	while (1)
 	{
 		// printUSART2("Main in progress \n");
 		//  data = getcharUSART2();
 		//  printUSART2("Enter je unesen");
 		//  putcharUSART2(data);
-		// delay_ms(100);
+		// delay_ms(20);
 #ifndef USART_ECHO
 		chkRxBuffUSART3();
 #endif

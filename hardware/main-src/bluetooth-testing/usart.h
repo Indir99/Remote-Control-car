@@ -8,6 +8,7 @@
 #include <string.h>
 #include <stdint.h>
 #include <stddef.h>
+#include <stdlib.h>
 
 // Define for USART2
 #define USART2_BUFFER_SIZE 512
@@ -54,6 +55,5 @@ void SplitString(char c, char *toSplit);
 extern volatile uint8_t g_usart3_buffer[USART3_BUFFER_SIZE];
 extern volatile uint16_t g_usart3_widx;
 extern volatile uint16_t g_usart3_ridx;
-extern volatile uint8_t usart3_state;
 
 #endif

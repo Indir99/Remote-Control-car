@@ -6,9 +6,6 @@ volatile uint8_t g_usart2_buffer[USART2_BUFFER_SIZE];
 volatile uint16_t g_usart2_widx = 0;
 volatile uint16_t g_usart2_ridx = 0;
 
-// char *Left;
-// char *Right;
-
 void initUSART2(uint32_t baudrate)
 {
 	// wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
@@ -628,5 +625,28 @@ void SplitString(char c, char *toSplit)
 		right[i - char_index - 1] = toSplit[i];
 	}
 	right[strlen(toSplit) - char_index] = '\0';
-	printUSART2("Received: Left: %s  Right: %s\n", left, right);
+
+	uint8_t value = (uint8_t)strtol(right, NULL, 10);
+
+	printUSART2("Received: Left: %s  Right: %d\n", left, value);
+	if (!strcmp(left, "PD12") && value == 1)
+	{
+		printUSART2("Diode PD12 control\n");
+		GPIOD->ODR = 0x8000;
+	}
+	if (!strcmp(left, "PD13") && value == 1)
+	{
+		printUSART2("Diode PD13 control\n");
+		GPIOD->ODR = 0x4000;
+	}
+	if (!strcmp(left, "PD14") && value == 1)
+	{
+		printUSART2("Diode PD14 control\n");
+		GPIOD->ODR = 0x2000;
+	}
+	if (!strcmp(left, "PD15") && value == 1)
+	{
+		printUSART2("Diode PD15 control\n");
+		GPIOD->ODR = 0x1000;
+	}
 }
