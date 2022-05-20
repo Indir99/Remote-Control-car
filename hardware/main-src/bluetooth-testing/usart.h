@@ -40,7 +40,7 @@ extern volatile uint16_t g_usart2_ridx;
 void initUSART3(uint32_t baudrate);
 void putcharUSART3(uint8_t data);
 void printUSART3(char *str, ...);
-// void sprintUSART3(uint8_t *str);
+void sprintUSART3(uint8_t *str);
 uint8_t getcharUSART3(void);
 
 void chkRxBuffUSART3(void);

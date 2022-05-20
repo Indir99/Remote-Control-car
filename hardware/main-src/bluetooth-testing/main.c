@@ -5,7 +5,7 @@
 int main(void)
 {
 	initUSART2(USART2_BAUDRATE_115200);
-	initUSART3(USART3_BAUDRATE_115200);
+	initUSART3(USART3_BAUDRATE_9600);
 	initSYSTIMER();
 	enIrqUSART2();
 	enIrqUSART3();
@@ -20,9 +20,10 @@ int main(void)
 	// clchar data = 'a';
 	while (1)
 	{
-		// data = getcharUSART2();
-		// printUSART2("Enter je unesen");
-		// putcharUSART2(data);
+		// printUSART2("Main in progress \n");
+		//  data = getcharUSART2();
+		//  printUSART2("Enter je unesen");
+		//  putcharUSART2(data);
 		// delay_ms(100);
 #ifndef USART_ECHO
 		chkRxBuffUSART3();
