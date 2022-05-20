@@ -5,8 +5,10 @@
 int main(void)
 {
 	initUSART2(USART2_BAUDRATE_115200);
+	initUSART3(USART3_BAUDRATE_115200);
 	initSYSTIMER();
 	enIrqUSART2();
+	enIrqUSART3();
 	RCC->AHB1ENR |= RCC_AHB1ENR_GPIODEN; //
 	GPIOD->MODER |= 0x55000000;			 //
 	GPIOD->OTYPER |= 0x00000000;		 //
@@ -23,7 +25,7 @@ int main(void)
 		// putcharUSART2(data);
 		// delay_ms(100);
 #ifndef USART_ECHO
-		chkRxBuffUSART2();
+		chkRxBuffUSART3();
 #endif
 	}
 }

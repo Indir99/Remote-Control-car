@@ -1,10 +1,10 @@
 #include "usart.h"
 
+//************************************************ USART2 **************************
+
 volatile uint8_t g_usart2_buffer[USART2_BUFFER_SIZE];
 volatile uint16_t g_usart2_widx = 0;
 volatile uint16_t g_usart2_ridx = 0;
-volatile uint8_t state = 0;
-volatile uint8_t arrow = 0;
 
 void initUSART2(uint32_t baudrate)
 {
@@ -288,6 +288,129 @@ void chkRxBuffUSART2(void)
 		if (g_usart2_ridx >= (USART2_BUFFER_SIZE))
 		{
 			g_usart2_ridx = 0;
+		}
+	}
+}
+
+// ************************************** USART3 ************************************
+
+volatile uint8_t g_usart3_buffer[USART3_BUFFER_SIZE];
+volatile uint16_t g_usart3_widx = 0;
+volatile uint16_t g_usart3_ridx = 0;
+
+void initUSART3(uint32_t baudrate)
+{
+
+	// wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+	//  USART3: PD8 -> TX & PD9 -> RX
+	//------------------------------------------------------------------
+
+	RCC->AHB1ENR |= RCC_AHB1ENR_GPIODEN;
+	RCC->APB1ENR |= RCC_APB1ENR_USART3EN;
+	GPIOD->MODER |= (GPIO_MODER_MODER8_1) | (GPIO_MODER_MODER9_1);
+	GPIOD->AFR[1] |= 0x00000077;
+
+	GPIOA->OSPEEDR |= GPIO_OSPEEDER_OSPEEDR2_1;
+	GPIOA->OSPEEDR |= GPIO_OSPEEDER_OSPEEDR3_1;
+
+	USART3->BRR = baudrate;
+	USART3->CR1 = (USART_CR1_UE) | (USART_CR1_TE) | (USART_CR1_RE);
+}
+
+void putcharUSART3(uint8_t data)
+{ /// print one character to USART2
+	while (!(USART3->SR & USART_SR_TC))
+		;
+
+	USART3->DR = data;
+}
+
+uint8_t getcharUSART3(void)
+{ /// get one character from USART1
+	uint8_t data;
+	USART3->CR1 |= USART_CR1_UE | USART_CR1_RE; // enable usart	and Rx
+	while ((USART3->SR & USART_SR_RXNE) != USART_SR_RXNE)
+		; // wait until data ready
+
+	data = USART3->DR;				// send data
+	USART3->SR &= ~(USART_SR_RXNE); // clear Rx data ready flag
+	USART3->CR1 &= ~(USART_CR1_RE);
+	return data;
+}
+
+void enIrqUSART3(void)
+{
+	USART3->CR1 &= ~(USART_CR1_UE);
+
+	NVIC_EnableIRQ(USART3_IRQn);
+	USART3->CR1 |= (USART_CR1_UE) | (USART_CR1_RE) | (USART_CR1_RXNEIE);
+}
+
+void disIrqUSART3(void)
+{
+	USART3->CR1 &= ~((USART_CR1_UE) | (USART_CR1_RXNEIE));
+
+	NVIC_DisableIRQ(USART2_IRQn);
+	USART3->CR1 |= (USART_CR1_UE);
+}
+
+#ifdef USART_ECHO
+void USART3_IRQHandler(void)
+{
+	uint8_t data;
+
+	if (USART3->SR & (USART_SR_RXNE))
+	{
+		data = USART3->DR;
+		// USART3->SR &= ~(USART_SR_RXNE);
+		USART3->DR = data;
+	}
+}
+#else
+
+void USART3_IRQHandler(void)
+{
+	// usart3_state = 0;
+
+	if (USART3->SR & (USART_SR_RXNE))
+	{
+		g_usart3_buffer[g_usart3_widx] = USART3->DR;
+		g_usart3_widx++;
+		if (g_usart3_widx >= (USART3_BUFFER_SIZE))
+		{
+			// g_usart3_ridx = 0;
+			g_usart3_widx = 0;
+			// usart3_state = 0;
+		}
+		if (g_usart3_ridx >= (USART3_BUFFER_SIZE))
+		{
+			g_usart3_ridx = 0;
+			// g_usart3_widx = 0;
+			//  usart3_state = 0;
+		}
+	}
+}
+
+#endif
+void chkRxBuffUSART3(void)
+{
+	if (g_usart3_ridx != g_usart3_widx)
+	{
+		if ((g_usart3_buffer[g_usart3_widx - 1] == '#'))
+		{
+			for (int i = g_usart3_ridx; i < g_usart3_widx - 1; i++)
+			{
+				putcharUSART2(g_usart3_buffer[i]);
+			}
+			printUSART2("\n");
+			g_usart3_ridx = 0;
+			g_usart3_widx = 0;
+		}
+
+		// USART3->DR = g_usart3_buffer[g_usart3_ridx++];
+		if (g_usart3_ridx >= (USART3_BUFFER_SIZE))
+		{
+			g_usart3_ridx = 0;
 		}
 	}
 }
