@@ -6,6 +6,9 @@ volatile uint8_t g_usart2_buffer[USART2_BUFFER_SIZE];
 volatile uint16_t g_usart2_widx = 0;
 volatile uint16_t g_usart2_ridx = 0;
 
+// char *Left;
+// char *Right;
+
 void initUSART2(uint32_t baudrate)
 {
 	// wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
@@ -591,7 +594,8 @@ void chkRxBuffUSART3(void)
 			g_usart3_ridx = 0;
 			g_usart3_widx = 0;
 			printUSART3("Message recived\n");
-			printUSART2("%s\n", str);
+			// printUSART2("%s\n", str);
+			SplitString('#', str);
 		}
 
 		// USART3->DR = g_usart3_buffer[g_usart3_ridx++];
@@ -600,4 +604,29 @@ void chkRxBuffUSART3(void)
 			g_usart3_ridx = 0;
 		}
 	}
+}
+
+void SplitString(char c, char *toSplit)
+{
+	uint8_t char_index = 0;
+	for (int i = 0; i < strlen(toSplit); i++)
+	{
+		if (toSplit[i] == c)
+		{
+			char_index = i;
+		}
+	}
+	char left[char_index];
+	char right[strlen(toSplit) - char_index];
+	for (int i = 0; i < char_index; i++)
+	{
+		left[i] = toSplit[i];
+	}
+	left[char_index] = '\0';
+	for (int i = char_index + 1; i < strlen(toSplit); i++)
+	{
+		right[i - char_index - 1] = toSplit[i];
+	}
+	right[strlen(toSplit) - char_index] = '\0';
+	printUSART2("Received: Left: %s  Right: %s\n", left, right);
 }

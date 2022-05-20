@@ -5,6 +5,9 @@
 #include <stdarg.h>
 #include "stm32f4xx.h"
 #include "misc.h"
+#include <string.h>
+#include <stdint.h>
+#include <stddef.h>
 
 // Define for USART2
 #define USART2_BUFFER_SIZE 512
@@ -45,6 +48,8 @@ uint8_t getcharUSART3(void);
 
 void chkRxBuffUSART3(void);
 void enIrqUSART3(void);
+
+void SplitString(char c, char *toSplit);
 
 extern volatile uint8_t g_usart3_buffer[USART3_BUFFER_SIZE];
 extern volatile uint16_t g_usart3_widx;
