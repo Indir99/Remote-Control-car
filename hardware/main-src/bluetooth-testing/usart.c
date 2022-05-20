@@ -1,5 +1,11 @@
 #include "usart.h"
 
+volatile uint8_t g_usart2_buffer[USART2_BUFFER_SIZE];
+volatile uint16_t g_usart2_widx = 0;
+volatile uint16_t g_usart2_ridx = 0;
+volatile uint8_t state = 0;
+volatile uint8_t arrow = 0;
+
 void initUSART2(uint32_t baudrate)
 {
 	// wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
@@ -214,5 +220,74 @@ void sprintUSART2(uint8_t *str)
 
 		if (k == MAX_PRINT_STRING_SIZE)
 			break;
+	}
+}
+
+void enIrqUSART2(void)
+{
+	USART2->CR1 &= ~(USART_CR1_UE);
+
+	NVIC_EnableIRQ(USART2_IRQn);
+	USART2->CR1 |= (USART_CR1_UE) | (USART_CR1_RE) | (USART_CR1_RXNEIE);
+}
+
+void disIrqUSART2(void)
+{
+	USART2->CR1 &= ~((USART_CR1_UE) | (USART_CR1_RXNEIE));
+
+	NVIC_DisableIRQ(USART2_IRQn);
+	USART2->CR1 |= (USART_CR1_UE);
+}
+
+#ifdef USART_ECHO
+void USART2_IRQHandler(void)
+{
+	uint8_t data;
+
+	if (USART2->SR & (USART_SR_RXNE))
+	{
+		data = USART2->DR;
+		// USART3->SR &= ~(USART_SR_RXNE);
+		USART2->DR = data;
+	}
+}
+#else
+
+void USART2_IRQHandler(void)
+{
+
+	if (USART2->SR & (USART_SR_RXNE))
+	{
+		g_usart2_buffer[g_usart2_widx] = USART2->DR;
+		g_usart2_widx++;
+		if (g_usart2_widx >= (USART2_BUFFER_SIZE))
+		{
+			g_usart2_widx = 0;
+		}
+	}
+}
+
+#endif
+void chkRxBuffUSART2(void)
+{
+
+	if (g_usart2_ridx != g_usart2_widx)
+	{
+		if ((g_usart2_buffer[g_usart2_widx - 1] == '#'))
+		{
+			for (int i = g_usart2_ridx; i < g_usart2_widx - 1; i++)
+			{
+				putcharUSART2(g_usart2_buffer[i]);
+			}
+			printUSART2("\n");
+			g_usart2_ridx = 0;
+			g_usart2_widx = 0;
+		}
+
+		// USART2->DR = g_usart2_buffer[g_usart2_ridx++];
+		if (g_usart2_ridx >= (USART2_BUFFER_SIZE))
+		{
+			g_usart2_ridx = 0;
+		}
 	}
 }
