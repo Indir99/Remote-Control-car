@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri May 20 09:51:45 2022
+# Make data base, printed on Sat Jul 30 15:16:03 2022
 
 # Variables
 
@@ -28,12 +28,8 @@ XDG_SESSION_CLASS = user
 SNAP_COMMON = /var/snap/code/common
 # environment
 XDG_SESSION_TYPE = x11
-# environment
-VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# environment
-IM_CONFIG_PHASE = 1
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
@@ -47,11 +43,13 @@ CURDIR := /home/indir/Fakultet/DiplomskiRad/hardware/main-src/bluetooth-testing
 # makefile
 SHELL = /bin/sh
 # environment
-SNAP_DATA = /var/snap/code/96
+SNAP_DATA = /var/snap/code/102
+# environment
+VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:53271
+JOURNAL_STREAM = 8:52276
 # makefile (from 'Makefile', line 29)
 CFLAGS = -g -O2 -Wall -T$(SDK)/stm32_flash.ld  -mlittle-endian -mthumb -mcpu=cortex-m4 -mthumb-interwork -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fsingle-precision-constant -I. -I $(SDK)
 # environment
@@ -67,7 +65,7 @@ MAKEFILE_LIST :=  Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-GIO_LAUNCHED_DESKTOP_FILE = /var/lib/snapd/desktop/applications/code_code.desktop
+IM_CONFIG_PHASE = 1
 # environment
 USERNAME = indir
 # environment
@@ -78,14 +76,10 @@ MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
-# environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
-_ = /snap/code/96/usr/share/code/code
 # makefile (from 'Makefile', line 34)
 OBJS = $(SRCS:.c=.o)
 # environment
-MANAGERPID = 1491
+MANAGERPID = 1549
 # makefile (from 'Makefile', line 17)
 GNUGCC = ../../gcc-arm-none-eabi/bin
 # environment
@@ -93,55 +87,51 @@ LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 LC_NAME = bs_BA.UTF-8
 # environment
-VSCODE_CWD = /home/indir
+VSCODE_CWD = /home/indir/Fakultet/DiplomskiRad/hardware/main-src
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/96/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/102/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/indir/.local/bin:/home/indir/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/indir/Fakultet/DSA/esp8266-dsa/xtensa-lx106-elf/bin:/home/indir/intelFPGA_lite/20.1/quartus/bin:/home/indir/intelFPGA_lite/20.1/nios2eds/bin
+PATH = /home/indir/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/indir/.local/share/JetBrains/Toolbox/scripts:/home/indir/Fakultet/DSA/esp8266-dsa/xtensa-lx106-elf/bin:/home/indir/intelFPGA_lite/20.1/quartus/bin:/home/indir/intelFPGA_lite/20.1/nios2eds/bin
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 QUARTUS_ROOTDIR_OVERRIDE = /home/indir/intelFPGA_lite/20.1/quartus
 # environment
-SESSION_MANAGER = local/indir-ThinkPad:@/tmp/.ICE-unix/1706,unix/indir-ThinkPad:/tmp/.ICE-unix/1706
+SESSION_MANAGER = local/indir-ThinkPad:@/tmp/.ICE-unix/1765,unix/indir-ThinkPad:/tmp/.ICE-unix/1765
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/indir/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/96
+SNAP = /snap/code/102
 # makefile (from 'Makefile', line 5)
 STM32CUBEPROG := ../../stmcubeprog/bin/STM32_Programmer.sh -vb 1 -q -c port=SWD 
 # environment
-SNAP_VERSION = da15b6fd
+SNAP_VERSION = 3b889b09
 # environment
 XDG_MENU_PREFIX = gnome-
-# environment
-VSCODE_LOG_STACK = false
 # environment
 DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 340e636a10e14293aad9ed3e8505830d
+INVOCATION_ID = 7beca15346e44d648d6bedbc6eb08c13
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/96/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/102/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
 ALTERAOCLSDKROOT = /home/indir/intelFPGA_lite/20.1/hld
 # environment
-LS_COLORS = 
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 # makefile (from 'Makefile', line 6)
 SDK = ../../sdk
 # environment
 XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
-# environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 186996
 # makefile (from 'Makefile', line 20)
 SIZE = $(GNUGCC)/arm-none-eabi-size
 # automatic
@@ -149,15 +139,13 @@ SIZE = $(GNUGCC)/arm-none-eabi-size
 # environment
 DISPLAY = :0
 # environment
-VSCODE_PIPE_LOGGING = true
-# environment
 SNAP_INSTANCE_KEY = 
 # environment
 PWD = /home/indir/Fakultet/DiplomskiRad/hardware/main-src/bluetooth-testing
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1669
+SSH_AGENT_PID = 1728
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -171,7 +159,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/indir/.config/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+VSCODE_CODE_CACHE_PATH = /home/indir/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
 # environment
 LOGNAME = indir
 # environment
@@ -198,6 +186,8 @@ ALTERAPATH = /home/indir/intelFPGA_lite/20.1
 LC_TIME = bs_BA.UTF-8
 # environment
 SNAP_REAL_HOME = /home/indir
+# environment
+COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
 # default
@@ -207,21 +197,19 @@ QT_IM_MODULE = ibus
 # makefile (from 'Makefile', line 33)
 SRCS = main.c  usart.c misc.c delay.c $(SDK)/startup_stm32f4xx.s  $(SDK)/system_stm32f4xx.c 
 # environment
-SNAP_USER_DATA = /home/indir/snap/code/96
+SNAP_USER_DATA = /home/indir/snap/code/102
 # environment
-SHLVL = 0
+SHLVL = 1
 # makefile (from 'Makefile', line 18)
 CC = $(GNUGCC)/arm-none-eabi-gcc
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
-# environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-057de7cd-2c6e-45ae-8656-17aa12dd2b99.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
 USER = indir
 # environment
-SNAP_REVISION = 96
+SNAP_REVISION = 102
 # environment
 LC_MONETARY = bs_BA.UTF-8
 # makefile
@@ -234,6 +222,8 @@ XDG_CURRENT_DESKTOP = Unity
 LC_TELEPHONE = bs_BA.UTF-8
 # default
 MAKE_COMMAND := make
+# environment
+OLDPWD = /home/indir/Fakultet/DiplomskiRad/hardware/main-src/bluetooth-testing
 # default
 .VARIABLES := 
 # automatic
@@ -241,9 +231,7 @@ MAKE_COMMAND := make
 # environment
 LANGUAGE = en_US:en
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-04238bc5-1.67.1-main.sock
-# environment
-BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
+VSCODE_IPC_HOOK = /run/user/1000/vscode-04238bc5-1.69.2-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -277,22 +265,26 @@ LC_NUMERIC = bs_BA.UTF-8
 # environment
 LC_MEASUREMENT = bs_BA.UTF-8
 # environment
- 
 SNAP_NAME = code
 # environment
 LC_ALL = C
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/6b53cfd1_e46e_4041_8fbb_b47c13285817
 # automatic
 ^F = $(notdir $^)
 # makefile (from 'Makefile', line 19)
 OBJCOPY = $(GNUGCC)/arm-none-eabi-objcopy
+# environment
+GNOME_TERMINAL_SERVICE = :1.2043
 # default
 SUFFIXES := 
 # environment
 SNAP_REEXEC = 
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
+ 
 # environment
 WINDOWPATH = 2
 # default
@@ -308,9 +300,11 @@ LC_ADDRESS = bs_BA.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 187041
+TERM = xterm-256color
+# environment
+VSCODE_PID = 86298
 # variable set hash-table stats:
-# Load=149/1024=15%, Rehash=0, Collisions=27/222=12%
+# Load=146/1024=14%, Rehash=0, Collisions=23/219=11%
 
 # Pattern-specific Variable Values
 
@@ -393,7 +387,7 @@ all: main.elf
 # Not a target:
 main.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-18 18:13:03.069889649
+#  Last modified 2022-05-20 16:39:08.835345396
 #  File has been updated.
 #  Successfully updated.
 
@@ -454,7 +448,7 @@ clean:
 # Not a target:
 usart.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-18 18:08:50.983499524
+#  Last modified 2022-05-20 16:41:03.284933963
 #  File has been updated.
 #  Successfully updated.
 
@@ -481,6 +475,6 @@ upload: proj
 # strcache performance: lookups = 42 / hit rate = 42%
 # hash-table stats:
 # Load=24/8192=0%, Rehash=0, Collisions=1/42=2%
-# Finished Make data base on Fri May 20 09:51:45 2022
+# Finished Make data base on Sat Jul 30 15:16:03 2022
 
  

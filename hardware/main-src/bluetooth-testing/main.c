@@ -16,6 +16,12 @@ int main(void)
 	GPIOD->OSPEEDR |= 0xFF000000;		 //
 	GPIOD->ODR &= ~(0xf000);
 
+	printUSART2("**************************************************************\n");
+	printUSART2("\n");
+	printUSART2("				App start \n");
+	printUSART2("\n");
+	printUSART2("**************************************************************\n");
+
 	while (1)
 	{
 		// printUSART2("Main in progress \n");
