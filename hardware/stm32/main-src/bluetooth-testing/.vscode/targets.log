@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul 30 15:16:03 2022
+# Make data base, printed on Mon Aug 29 12:54:05 2022
 
 # Variables
 
@@ -43,13 +43,13 @@ CURDIR := /home/indir/Fakultet/DiplomskiRad/hardware/main-src/bluetooth-testing
 # makefile
 SHELL = /bin/sh
 # environment
-SNAP_DATA = /var/snap/code/102
+SNAP_DATA = /var/snap/code/105
 # environment
 VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:52276
+JOURNAL_STREAM = 8:52503
 # makefile (from 'Makefile', line 29)
 CFLAGS = -g -O2 -Wall -T$(SDK)/stm32_flash.ld  -mlittle-endian -mthumb -mcpu=cortex-m4 -mthumb-interwork -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fsingle-precision-constant -I. -I $(SDK)
 # environment
@@ -79,7 +79,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # makefile (from 'Makefile', line 34)
 OBJS = $(SRCS:.c=.o)
 # environment
-MANAGERPID = 1549
+MANAGERPID = 1563
 # makefile (from 'Makefile', line 17)
 GNUGCC = ../../gcc-arm-none-eabi/bin
 # environment
@@ -89,7 +89,7 @@ LC_NAME = bs_BA.UTF-8
 # environment
 VSCODE_CWD = /home/indir/Fakultet/DiplomskiRad/hardware/main-src
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/102/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/105/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -99,17 +99,17 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 QUARTUS_ROOTDIR_OVERRIDE = /home/indir/intelFPGA_lite/20.1/quartus
 # environment
-SESSION_MANAGER = local/indir-ThinkPad:@/tmp/.ICE-unix/1765,unix/indir-ThinkPad:/tmp/.ICE-unix/1765
+SESSION_MANAGER = local/indir-ThinkPad:@/tmp/.ICE-unix/1777,unix/indir-ThinkPad:/tmp/.ICE-unix/1777
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/indir/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/102
+SNAP = /snap/code/105
 # makefile (from 'Makefile', line 5)
 STM32CUBEPROG := ../../stmcubeprog/bin/STM32_Programmer.sh -vb 1 -q -c port=SWD 
 # environment
-SNAP_VERSION = 3b889b09
+SNAP_VERSION = e4503b30
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -117,9 +117,9 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 7beca15346e44d648d6bedbc6eb08c13
+INVOCATION_ID = ed5cdc02753549d9bef6136ced2ba053
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/102/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/105/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -145,7 +145,7 @@ PWD = /home/indir/Fakultet/DiplomskiRad/hardware/main-src/bluetooth-testing
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1728
+SSH_AGENT_PID = 1740
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -159,7 +159,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/indir/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
+VSCODE_CODE_CACHE_PATH = /home/indir/.config/Code/CachedData/e4503b30fc78200f846c62cf8091b76ff5547662
 # environment
 LOGNAME = indir
 # environment
@@ -197,7 +197,7 @@ QT_IM_MODULE = ibus
 # makefile (from 'Makefile', line 33)
 SRCS = main.c  usart.c misc.c delay.c $(SDK)/startup_stm32f4xx.s  $(SDK)/system_stm32f4xx.c 
 # environment
-SNAP_USER_DATA = /home/indir/snap/code/102
+SNAP_USER_DATA = /home/indir/snap/code/105
 # environment
 SHLVL = 1
 # makefile (from 'Makefile', line 18)
@@ -209,7 +209,7 @@ MAKE_VERSION := 4.2.1
 # environment
 USER = indir
 # environment
-SNAP_REVISION = 102
+SNAP_REVISION = 105
 # environment
 LC_MONETARY = bs_BA.UTF-8
 # makefile
@@ -223,7 +223,7 @@ LC_TELEPHONE = bs_BA.UTF-8
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /home/indir/Fakultet/DiplomskiRad/hardware/main-src/bluetooth-testing
+OLDPWD = /home/indir/Fakultet/DiplomskiRad/hardware
 # default
 .VARIABLES := 
 # automatic
@@ -231,7 +231,7 @@ OLDPWD = /home/indir/Fakultet/DiplomskiRad/hardware/main-src/bluetooth-testing
 # environment
 LANGUAGE = en_US:en
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-04238bc5-1.69.2-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-04238bc5-1.70.2-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -271,20 +271,20 @@ LC_ALL = C
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/6b53cfd1_e46e_4041_8fbb_b47c13285817
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/321a9692_ca71_421a_a3ca_0f3d3ac74ebb
 # automatic
 ^F = $(notdir $^)
 # makefile (from 'Makefile', line 19)
 OBJCOPY = $(GNUGCC)/arm-none-eabi-objcopy
 # environment
-GNOME_TERMINAL_SERVICE = :1.2043
+GNOME_TERMINAL_SERVICE = :1.225
 # default
+ 
 SUFFIXES := 
 # environment
 SNAP_REEXEC = 
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
- 
 # environment
 WINDOWPATH = 2
 # default
@@ -302,7 +302,7 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 86298
+VSCODE_PID = 8330
 # variable set hash-table stats:
 # Load=146/1024=14%, Rehash=0, Collisions=23/219=11%
 
@@ -387,7 +387,7 @@ all: main.elf
 # Not a target:
 main.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-20 16:39:08.835345396
+#  Last modified 2022-07-30 15:22:59.697945014
 #  File has been updated.
 #  Successfully updated.
 
@@ -475,6 +475,6 @@ upload: proj
 # strcache performance: lookups = 42 / hit rate = 42%
 # hash-table stats:
 # Load=24/8192=0%, Rehash=0, Collisions=1/42=2%
-# Finished Make data base on Sat Jul 30 15:16:03 2022
+# Finished Make data base on Mon Aug 29 12:54:05 2022
 
  
